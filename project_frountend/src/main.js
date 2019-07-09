@@ -1,3 +1,4 @@
+
 const theApp = document.querySelector('#the_app')
 const graveYard = document.querySelector(".graveyard");
 const modal = document.getElementById("myModal");

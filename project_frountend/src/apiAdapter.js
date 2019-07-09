@@ -22,5 +22,4 @@ class ApiAdapter {
     .then(rsp => rsp.json())
     .then(callback)
   }
-
 }
