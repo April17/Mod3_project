@@ -5,28 +5,14 @@ const showForm = document.querySelector(".js-btn");
 const span = document.getElementsByClassName("close")[0];
 
 
-// ---------------- EVENT LISTENERS WELCOME ----------------
+// ---------------- EVENT LISTENERS ----------------
 document.addEventListener("DOMContentLoaded", () => {
-  const welcomeForm = document.querySelector('.the_form');
-  welcomeForm.addEventListener("submit", secondStage)
-  showForm.addEventListener("click", displayModal)
+  new Welcome
+  new editModal
 })
 
-// ---------------- DOM LOGIC WELCOME ----------------
-function secondStage(event) {
-  event.preventDefault()
-  event.target.parentElement.className += " hidden"
-  theApp.className = ""
-}
+// ---------------- DOM LOGIC ----------------
 
-function displayModal() {
-  modal.style.display = "block";
-  span.addEventListener("click", () =>{
-    modal.style.display = "none";
-  })
-  const newStoryForm = document.querySelector('.js-form')
-  newStoryForm.addEventListener("submit", testDomSlap)
-}
 
 // use this function after you do a fetch request in your event listener
 function testDomSlap(event) {

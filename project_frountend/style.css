@@ -38,10 +38,30 @@ body {
   margin-top: 15px;
 }
 
-.btn-div {
+header {
+  display: flex;
+  justify-content: center;
+  background-color: teal;
+  align-items: center;
+  padding: 0px 10% 20px 10%;
+}
+
+.nav-bar {
+  list-style: none;
+  align: center;
+}
+
+.nav-bar li {
+  display: inline-block;
+  padding: 0px 20px;
+  color: white;
+}
+
+
+/* .btn-div {
   text-align: center;
   padding-bottom: 50px;
-}
+} */
 
 .graveyard {
   display: flex;
@@ -82,10 +102,12 @@ body {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
+  width: 30%;
   border-radius: 15px;
   box-shadow: 0 7px #999;
-
+  position: absolute;
+  top: 20%;
+  left: 30%;
 }
 
 /* The Close Button */
