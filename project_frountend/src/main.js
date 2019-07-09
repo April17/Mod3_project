@@ -8,11 +8,16 @@ const span = document.getElementsByClassName("close")[0];
 // ---------------- EVENT LISTENERS ----------------
 document.addEventListener("DOMContentLoaded", () => {
   new Welcome
-  new editModal
+  new EditModal
+  ApiAdapter.fetchStories(testFunction)
+
 })
 
 // ---------------- DOM LOGIC ----------------
-
+//
+function testFunction(data) {
+  debugger
+}
 
 // use this function after you do a fetch request in your event listener
 function testDomSlap(event) {

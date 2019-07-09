@@ -1,4 +1,4 @@
-class editModal {
+class EditModal {
   constructor() {
     const showForm = document.querySelector(".js-btn");
     showForm.addEventListener("click", this.displayModal)
