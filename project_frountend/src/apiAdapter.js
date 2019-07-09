@@ -1,6 +1,6 @@
 class ApiAdapter {
 
-  setCurrentUser(name){
+  static setCurrentUser(name){
     let currentUser = {
       "name": name
     }
@@ -17,4 +17,9 @@ class ApiAdapter {
       .then(console.log)
   }
 
+  static fetchStories(callback) {
+    fetch("http://localhost:3000/stories")
+    .then(rsp => rsp.json())
+    .then(callback)
+  }
 }

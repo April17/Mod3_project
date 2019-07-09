@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
+
   def index
     users = User.all
     render json: users
   end
-  
+
   def create
     user = User.find_by(name: params[:name])
     if !user
@@ -11,4 +12,5 @@ class UsersController < ApplicationController
     end
     render json: user
   end
+
 end
