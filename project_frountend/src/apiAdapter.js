@@ -14,12 +14,10 @@ class ApiAdapter {
     }
     fetch("http://localhost:3000/users", config)
       .then(rsp => rsp.json())
-      .then(console.log)
+      // .then(console.log)
   }
 
-  static fetchStories(callback) {
-    fetch("http://localhost:3000/stories")
-    .then(rsp => rsp.json())
-    .then(callback)
+  static fetchStories() {
+    return fetch("http://localhost:3000/stories")
   }
 }
