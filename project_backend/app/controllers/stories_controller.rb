@@ -3,7 +3,12 @@ class StoriesController < ApplicationController
     stories = Story.all
     stories.each do |story|
       story.like_count = story.likes.count
+      story.save()
     end
     render json: stories.to_json(include: [:user, :comments])
+  end
+  def show
+    story = Story.find_by(id: params[:id])
+    render json: story.to_json(include: [:user, :comments])
   end
 end
