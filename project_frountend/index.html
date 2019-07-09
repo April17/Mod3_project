@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>My First View!!</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" /> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   </head>
 
   <body>
+
     <!-- WELCOME SCREEN-->
     <div class="ghost-img">
       <img src="https://i.giphy.com/media/5YMDSfui21JLi/giphy.webp" height= 300px>
@@ -20,20 +19,32 @@
       </form>
     </div>
 
-    <!-- APP SCREEN -->
+      <!-- APP SCREEN -->
       <div class="hidden" id="the_app">
         <div class="btn-div">
-          <button class="js-btn btns" uk-toggle="target: #new_story_form">ADD A TOMBSTONE</button></div>
+          <button class="js-btn btns">ADD A TOMBSTONE</button></div>
        <div class="graveyard">
          <!-- ADD TOMBS -->
        </div>
 
-      </div>
+       <!-- MODAL NEW STORY -->
+       <div id="myModal" class="modal">
+         <div class="modal-content">
+             <span class="close">&times;</span>
+             <form class="js-form">
+               <h3>Tell A Story</h3>
+               <label for="title">Title</label><br>
+               <input id="title" type="text" placeholder="Title">
+               <br><label for="content">Content</label><br>
+               <textarea id="content" rows="5" cols="50" class="form-control"></textarea><br>
+               <input type="submit" value="Submit!">
+             </form>
+          </div>
+        </div>
 
-    <!-- MODAL ADD NEW FORM   -->
+      </div>  <!-- end of app -->
 
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src = "src/main.js" type = "text/javascript"></script>
+      <script src = "src/main.js" type = "text/javascript"></script>
   </body>
 
 </html>
