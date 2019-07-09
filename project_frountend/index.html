@@ -3,10 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>My First View!!</title>
-    <script src = "src/main.js" type = "text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
   </head>
+
   <body>
-    <h1>Hello World</h1>
-    <p>This HTML code is inside of a '.erb' file in the views directory, where it belongs.</p>
+    <!-- WELCOME SCREEN-->
+    <div class="ghost-img">
+      <img src="https://i.giphy.com/media/5YMDSfui21JLi/giphy.webp" height= 300px>
+      <form class="the_form">
+          <input class="user_input" type="text" placeholder="YOUR NAME...">
+          <br><br>
+          <input type="submit" value="ENTER" class="btns">
+      </form>
+    </div>
+
+    <!-- APP SCREEN -->
+      <div class="hidden" id="the_app">
+        <div class="btn-div">
+          <button class="js-btn btns" uk-toggle="target: #new_story_form">ADD A TOMBSTONE</button></div>
+       <div class="graveyard">
+         <!-- ADD TOMBS -->
+       </div>
+
+      </div>
+
+    <!-- MODAL ADD NEW FORM   -->
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src = "src/main.js" type = "text/javascript"></script>
   </body>
+
 </html>

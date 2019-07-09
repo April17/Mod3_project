@@ -1,0 +1,63 @@
+body {
+  color: #ff69b4;
+  background-color: #1C0827;
+}
+
+.ghost-img {
+  text-align: center;
+}
+.user_input {
+  border: 1px solid #ccc;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.btns {
+  display: inline-block;
+  padding: 10px 25px;
+  outline: none;
+  color: #fff;
+  background-color: #FFAF19;
+  font-family: monospace;
+  font-size: 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 7px #999;
+  margin-top: 15px;
+}
+.btns:hover {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  margin-top: 15px;
+}
+
+.btn-div {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.graveyard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.tomb {
+  background-color: #f1f1f1;
+  width: 80px;
+  margin: 20px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  zoom: 1.6;
+  color: #14CC6B;
+}
