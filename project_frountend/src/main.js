@@ -28,6 +28,7 @@ function displayModal() {
   newStoryForm.addEventListener("submit", testDomSlap)
 }
 
+// use this function after you do a fetch request in your event listener
 function testDomSlap(event) {
   event.preventDefault();
   const title = event.target[0].value
