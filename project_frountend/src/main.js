@@ -22,7 +22,6 @@ function testFunction(data) {
 // use this function after you do a fetch request in your event listener
 function testDomSlap(event) {
   event.preventDefault();
-  const title = event.target[0].value
   modal.style.display = "none";
   graveYard.innerHTML +=  `
    <div class="tomb">${title}</div>
