@@ -20,4 +20,18 @@ class ApiAdapter {
   static fetchStories() {
     return fetch("http://localhost:3000/stories")
   }
+  static searchStories(searchParams){
+    let search = {
+      "search": searchParams
+    }
+    let config = {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(search)
+    }
+    return fetch("http://localhost:3000/search", config)
+  }
 }

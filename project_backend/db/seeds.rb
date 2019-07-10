@@ -7,13 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # fan = User.create(name: "Fan")
 
-# boo = Story.create(title: "Sup secry", content: "Boo", user_id: 2)
+boo = Story.create(title: "Sup secry", content: "Boo", user_id: 1)
 
-Story.create(title: "Not Sup secry", content: "Boo", user_id: 3)
-Story.create(title: "Sup Sup secry", content: "NUUU", user_id: 1)
-Story.create(title: "Sup secry", content: "WUUUU", user_id: 1)
+# Story.create(title: "Not Sup secry", content: "Boo", user_id: 3)
+# Story.create(title: "Sup Sup secry", content: "NUUU", user_id: 1)
+# Story.create(title: "Sup secry", content: "WUUUU", user_id: 1)
 
-# tag_1 = Tag.create(name: "Gost", story: boo)
+tag_1 = Tag.create(name: "Blood")
+
+story_tag = StoryTag.create(story: boo, tag: tag_1)
 #
 # comment_1 = Comment.create(content: "nice story", user: fan, story: boo)
 #
