@@ -22,6 +22,12 @@ class StoriesController < ApplicationController
     render json: story.to_json(include: [:user, :comments, :tags])
   end
 
+  def destroy
+    story = Story.find_by(id: params[:id])
+    story.destroy
+    render json: story.to_json(only: [:id])
+  end
+
 end
 
 private

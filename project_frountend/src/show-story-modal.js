@@ -11,4 +11,16 @@ class ShowStoryModal {
     }
   }
 
+  likeStory(){
+    console.log("clicked");
+    ApiAdapter.likeStory()
+      .then(Utility.updateLike)
+  }
+
+  newComment(event){
+    event.preventDefault()
+    ApiAdapter.commentStory(commentForm.content.value)
+      .then(Utility.getComments)
+  }
+
 }

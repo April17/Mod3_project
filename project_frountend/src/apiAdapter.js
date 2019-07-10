@@ -59,4 +59,47 @@ class ApiAdapter {
     return fetch("http://localhost:3000/stories", config)
       .then(rsp => rsp.json())
   }
+  static likeStory(){
+    let newStory = {
+      "user_id": localStorage.userid,
+      "story_id": localStorage.storyid
+    }
+    let config = {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newStory)
+    }
+    return fetch("http://localhost:3000/likes", config)
+      .then(rsp => rsp.json())
+  }
+  static commentStory(comment){
+    let newStory = {
+      "content": comment,
+      "user_id": localStorage.userid,
+      "story_id": localStorage.storyid
+    }
+    let config = {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newStory)
+    }
+    return fetch("http://localhost:3000/comments", config)
+      .then(rsp => rsp.json())
+  }
+  static deleteStory(){
+    // console.log("clicked");
+    const id = localStorage.storyid
+    let config = {
+      method: "DELETE"
+    }
+    fetch(`http://localhost:3000/stories/${id}`, config)
+      .then(rsp => rsp.json())
+      .then(Utility.removeStone)
+  }
 }

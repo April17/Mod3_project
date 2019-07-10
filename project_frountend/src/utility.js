@@ -3,14 +3,23 @@ class Utility{
     const id = data.id
     localStorage.setItem('userid', id);
   }
+  static setCurrentStory(data){
+    const id = data.id
+    localStorage.setItem('storyid', id);
+  }
+  static setStoryOwner(data){
+    const id = data.user_id
+    localStorage.setItem('storyownerid', id);
+  }
   static allStoriesToDOM(data) {
     data.forEach(function(story){
       Utility.oneStory(story)
     })
   }
+
   static oneStory(story){
     graveYard.innerHTML =  `
-     <div class="tomb"><img src="images/tombstone.png" data-id=${story.id} id="tomb-con" height= 200px>
+     <div class="tomb" id="${story.id}"><img src="images/tombstone.png" data-id=${story.id} id="tomb-con" height= 200px>
       <div class="tomb-title">${story.title}</div>
      </div>
     ` + graveYard.innerHTML
@@ -32,14 +41,15 @@ class Utility{
     newStoryForm.append(checkDiv)
   }
 
-
-
   static addStoryData(story) {
     showStory.querySelector('h3').innerText = story.title
     showStory.querySelector('p').innerText = story.content
     showStory.querySelector('.like-btn').innerText = `💀 ${story.like_count}`
     Utility.getComments(story)
     Utility.getTags(story)
+    Utility.setCurrentStory(story)
+    Utility.setStoryOwner(story)
+    Utility.showDeleteBtn()
     showStory.style.display = "block";
     storyclose.addEventListener("click", () => {
       showStory.style.display = "none";
@@ -61,9 +71,22 @@ class Utility{
     }
   }
 
+  static showDeleteBtn(){
+    if (localStorage.userid == localStorage.storyownerid) {
+      deleteBtn.className = "btns"
+    }
+  }
+
   static getTags(story) {
     const p = document.querySelector("#js-tags")
     const tagArray = story.tags.map(x => x.name)
     p.innerText = tagArray.join(", ")
+  }
+  static updateLike(likeCount){
+    showStory.querySelector('.like-btn').innerText = `💀 ${likeCount.like_count}`
+  }
+  static removeStone(data){
+    document.getElementById(`${data.id}`).remove()
+    showStory.style.display = "none";
   }
 }
