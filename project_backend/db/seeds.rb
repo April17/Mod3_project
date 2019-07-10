@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # fan = User.create(name: "Fan")
 
-boo = Story.create(title: "Sup secry", content: "Boo", user_id: 2)
+# boo = Story.create(title: "Sup secry", content: "Boo", user_id: 2)
 
 Story.create(title: "Not Sup secry", content: "Boo", user_id: 3)
 Story.create(title: "Sup Sup secry", content: "NUUU", user_id: 1)

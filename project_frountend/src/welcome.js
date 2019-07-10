@@ -26,26 +26,16 @@ class Welcome {
   static testFunction(data) {
     data.forEach(function(story){
       graveYard.innerHTML +=  `
-       <div class="tomb">${story.title}</div>
+       <div class="tomb"><img src="images/tombstone.png" data-id=${story.id} id="tomb-con" height= 200px>
+        <div class="tomb-title">${story.title}</div>
+       </div>
       `
       anime({
         targets: '.tomb',
-        translateY: -20
+        translateY: -30,
+        delay: anime.stagger(150)
       })
     })
   }
 
-  // function testDomSlap(event) {
-  //   event.preventDefault();
-  //   const title = event.target[0].value
-  //   modal.style.display = "none";
-  //   graveYard.innerHTML +=  `
-  //    <div class="tomb">${title}</div>
-  //   `
-  //   anime({
-  //     targets: '.tomb',
-  //     translateY: -30
-  //   });
-  //   event.target.reset()
-  // }
 }
