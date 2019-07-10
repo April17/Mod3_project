@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>The graveyard</title>
     <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Finger+Paint|Megrim|Offside|Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   </head>
 
@@ -18,7 +21,9 @@
           <br><br>
           <input type="submit" value="ENTER" class="btns">
       </form>
-      <img class="fire-img" src="https://media.giphy.com/media/MA8x4cafYavio/200.gif" height= 200px>
+      <div class="candle-img">
+        <img src="https://media.giphy.com/media/nzeGq8D8xRFWE/giphy.gif" height= 150px>
+      </div>
     </div>
 
       <!-- APP SCREEN -->
@@ -26,7 +31,7 @@
 
         <header>
           <ul class="nav-bar">
-            <li class="logo">🔥 the campfire</li>
+            <li class="logo">🔥 the graveyard</li>
             <li class="js-user"></li>
             <li>SEARCH BAR: _____</li>
             <li><button class="js-btn btns">ADD A TOMBSTONE</button></li>
@@ -57,8 +62,38 @@
         <div id="showModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
-            <p>IT WORKED???</p>
-          </div>
+            <h3>IT WORKED???</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="like-div">
+              <!-- <p class="js-likes">0</p> -->
+              <button class="like-btn">💀 0</button>
+            </div>
+            <!-- SHOW COMMENTS -->
+            <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse1">COMMENTS</a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <div class="panel-body js-comment-list">
+                    <!-- COMMENTS LIST -->
+                    <ul id="js-ul">
+                    <ul>
+                  </div>
+                  <div class="panel-footer">
+                    <form>
+                      <input type="text" name="comment-content" placeholder="your comment...">
+                      <input class="comment-btn" type="submit" value="⇒">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer>
+              <p id="js-tags"></p>
+            </footer>
         </div>
 
       </div>  <!-- end of app -->
