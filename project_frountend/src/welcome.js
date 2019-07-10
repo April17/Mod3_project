@@ -9,6 +9,7 @@ class Welcome {
       }
     welcomeUser.innerText = `👻  ${name.toUpperCase()} 👻`
     ApiAdapter.setCurrentUser(name)
+      .then(Utility.setCurrentUser)
     event.target.parentElement.className += " hidden"
     theApp.className = ""
 

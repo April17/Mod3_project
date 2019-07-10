@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>The Campfire</title>
+    <title>The graveyard</title>
     <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Finger+Paint|Megrim|Offside|Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
@@ -12,7 +12,7 @@
 
     <!-- WELCOME SCREEN-->
     <div class="login">
-      <h3 id="front-title">the campfire</h3>
+      <h3 id="front-title">the graveyard</h3>
       <form class="the_form">
           <input class="user_input" type="text" placeholder="YOUR NAME...">
           <br><br>
@@ -29,7 +29,6 @@
             <li class="logo">🔥 the campfire</li>
             <li class="js-user"></li>
             <li>SEARCH BAR: _____</li>
-            <li>FILTER PLACE HOLDER</li>
             <li><button class="js-btn btns">ADD A TOMBSTONE</button></li>
           </ul>
         </header>
@@ -40,13 +39,15 @@
        <!-- MODAL NEW STORY -->
        <div id="myModal" class="modal">
          <div class="modal-content">
-             <span class="close">&times;</span>
-             <form class="js-form">
+             <span id="newStoryClose" class="close">&times;</span>
+             <form id="newStoryForm" class="js-form">
                <h3>Tell A Story</h3>
                <label for="title">Title</label><br>
                <input id="title" type="text" placeholder="Title">
                <br><label for="content">Content</label><br>
                <textarea id="content" rows="5" cols="50" class="form-control"></textarea><br>
+               <div id="checkdiv">
+               </div>
                <input type="submit" value="Submit!">
              </form>
           </div>

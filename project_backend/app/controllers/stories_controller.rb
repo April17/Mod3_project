@@ -14,4 +14,18 @@ class StoriesController < ApplicationController
     render json: story.to_json(include: [:user, :comments, :tags])
   end
 
+  def create
+    story = Story.create(story_params)
+    params[:tags].each do |tag|
+      StoryTag.create(story_id: story.id, tag_id: tag)
+    end
+    render json: story.to_json(include: [:user, :comments, :tags])
+  end
+
+end
+
+private
+
+def story_params
+  params.require(:story).permit(:title, :content, :user_id)
 end

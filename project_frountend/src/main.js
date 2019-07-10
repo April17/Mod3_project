@@ -6,7 +6,8 @@ const showStory = document.getElementById("showModal")
 const storyclose = showStory.querySelector('.close')
 const showForm = document.querySelector(".js-btn");
 const welcomeForm = document.querySelector('.the_form');
-const span = document.getElementsByClassName("close")[0];
+const span = document.querySelector("#newStoryClose");
+const newStoryForm = document.querySelector('#newStoryForm')
 const data = ApiAdapter.fetchStories()
 const welcome = new Welcome
 const newStory = new NewStoryModal
@@ -17,4 +18,5 @@ const oneStory = new ShowStoryModal
 document.addEventListener("DOMContentLoaded", () => {
   showForm.addEventListener("click", newStory.displayModal)
   welcomeForm.addEventListener("submit", welcome.secondStage)
+  newStoryForm.addEventListener("submit", newStory.newStoryInfo)
 })
