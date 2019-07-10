@@ -21,10 +21,11 @@ const oneStory = new ShowStoryModal
 
 // ---------------- EVENT LISTENERS ----------------
 document.addEventListener("DOMContentLoaded", () => {
-  showForm.addEventListener("click", newStory.displayModal)
   welcomeForm.addEventListener("submit", welcome.secondStage)
+  showForm.addEventListener("click", newStory.displayModal)
   newStoryForm.addEventListener("submit", newStory.newStoryInfo)
   commentForm.addEventListener("submit", oneStory.newComment)
   likeBtn.addEventListener("click", oneStory.likeStory)
   deleteBtn.addEventListener("click", ApiAdapter.deleteStory)
+  searchForm.addEventListener("submit", Utility.searchStone)
 })

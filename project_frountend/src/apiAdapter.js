@@ -19,11 +19,13 @@ class ApiAdapter {
   static fetchStories() {
     return fetch("http://localhost:3000/stories")
   }
+
   static fetchOneStory(id) {
     return fetch(`http://localhost:3000/stories/${id}`)
       .then(rsp => rsp.json())
   }
-  static searchStories(searchParams){
+
+  static searchStories(searchParams) {
     let search = {
       "search": searchParams
     }
@@ -35,12 +37,13 @@ class ApiAdapter {
       },
       body: JSON.stringify(search)
     }
-    return fetch("http://localhost:3000/search", config)
+    return fetch("http://localhost:3000/search", config).then(rsp => rsp.json())
   }
   static getTags(){
     return fetch(`http://localhost:3000/tags`)
       .then(rsp => rsp.json())
   }
+
   static createStory(title, content, checkedTags){
     let newStory = {
       "title": title,

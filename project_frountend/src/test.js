@@ -1,5 +1,5 @@
 const searchForm = document.querySelector("#search")
-const storyTag = document.querySelector("#storyTag")
+// const storyTag = document.querySelector("#storyTag")
 
 searchForm.addEventListener("submit", searchStone)
 

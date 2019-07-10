@@ -89,4 +89,14 @@ class Utility{
     document.getElementById(`${data.id}`).remove()
     showStory.style.display = "none";
   }
+  static searchStone(event){
+    event.preventDefault()
+    ApiAdapter.searchStories(searchForm.search.value)
+    .then(Utility.filterDom)
+  }
+
+  static filterDom(results) {
+    graveYard.innerHTML = ""
+    Utility.allStoriesToDOM(results)
+  }
 }
