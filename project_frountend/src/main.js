@@ -8,6 +8,7 @@ const showForm = document.querySelector(".js-btn");
 const welcomeForm = document.querySelector('.the_form');
 const span = document.querySelector("#newStoryClose");
 const newStoryForm = document.querySelector('#newStoryForm')
+const searchForm = document.querySelector("#search")
 const data = ApiAdapter.fetchStories()
 const welcome = new Welcome
 const newStory = new NewStoryModal
@@ -16,7 +17,8 @@ const oneStory = new ShowStoryModal
 
 // ---------------- EVENT LISTENERS ----------------
 document.addEventListener("DOMContentLoaded", () => {
-  showForm.addEventListener("click", newStory.displayModal)
   welcomeForm.addEventListener("submit", welcome.secondStage)
+  showForm.addEventListener("click", newStory.displayModal)
   newStoryForm.addEventListener("submit", newStory.newStoryInfo)
+  searchForm.addEventListener("submit", Utility.searchStone)
 })

@@ -40,6 +40,7 @@ class Utility{
     showStory.querySelector('.like-btn').innerText = `💀 ${story.like_count}`
     Utility.getComments(story)
     Utility.getTags(story)
+    
     showStory.style.display = "block";
     storyclose.addEventListener("click", () => {
       showStory.style.display = "none";
@@ -65,5 +66,16 @@ class Utility{
     const p = document.querySelector("#js-tags")
     const tagArray = story.tags.map(x => x.name)
     p.innerText = tagArray.join(", ")
+  }
+
+  static searchStone(event){
+    event.preventDefault()
+    ApiAdapter.searchStories(searchForm.search.value)
+    .then(Utility.filterDom)
+  }
+
+  static filterDom(results) {
+    graveYard.innerHTML = ""
+    Utility.allStoriesToDOM(results)
   }
 }

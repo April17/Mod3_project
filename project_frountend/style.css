@@ -58,6 +58,7 @@ li.logo {
   cursor: pointer;
   box-shadow: 0 7px #999;
   margin-top: 15px;
+  zoom: 0.6
 }
 .btns:hover, .like-btn:hover, .comment-btn:hover {
   box-shadow: 0 5px #666;
@@ -65,9 +66,6 @@ li.logo {
   margin-top: 15px;
 }
 
-.like-btn, .comment-btn {
-  zoom: 0.6
-}
 
 .like-btn {
   margin-bottom: 20px;
@@ -80,16 +78,24 @@ header {
   top: 0;
 }
 
-.nav-bar {
+ /* .nav-bar {
   background-color: teal;
   overflow: hidden;
   position: fixed;
   padding-bottom: 20px;
   text-align: center;
   width: 100%;
+} */
+
+.container-fluid {
+  background: teal;
 }
 
-.nav-bar li {
+
+
+.li-css {
+  padding-top: 15px;
+  padding-bottom: 15px;
   list-style: none;
   display: inline-block;
   padding: 0px 20px;
@@ -109,7 +115,6 @@ header {
   align-content: space-between;
   flex-wrap: wrap;
   text-align: center;
-  padding-top: 150px;
   margin-right: 60px;
 }
 
@@ -120,7 +125,7 @@ header {
   margin: 80px;
   text-align: center;
   font-size: 10px;
-  zoom: 1;
+  zoom: 0.9;
 }
 
 .tomb-title {

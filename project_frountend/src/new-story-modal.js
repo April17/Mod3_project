@@ -11,6 +11,7 @@ class NewStoryModal {
 
   newStoryInfo(event){
       event.preventDefault()
+      modal.style.display = "none"
       const title = event.target.title.value
       const content = event.target.content.value
       let checkedTags = []
@@ -20,6 +21,7 @@ class NewStoryModal {
           checkedTags.push(box.value)
         }
       })
+      newStoryForm.reset()
       ApiAdapter.createStory(title, content, checkedTags)
         .then(Utility.oneStory)
   }

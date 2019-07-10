@@ -3,7 +3,7 @@ class Welcome {
   secondStage(event) {
     event.preventDefault()
     const name = event.target[0].value
-    const welcomeUser = document.querySelector('.js-user')
+    const welcomeUser = document.querySelector('#js-user')
       if (name === "") {
         return alert("Please Enter A Name!");
       }
