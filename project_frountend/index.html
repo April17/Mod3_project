@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My First View!!</title>
+    <title>The Campfire</title>
+    <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Finger+Paint|Megrim|Offside|Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   </head>
@@ -10,13 +11,14 @@
   <body>
 
     <!-- WELCOME SCREEN-->
-    <div class="ghost-img">
-      <img src="https://i.giphy.com/media/5YMDSfui21JLi/giphy.webp" height= 300px>
+    <div class="login">
+      <h3 id="front-title">the campfire</h3>
       <form class="the_form">
           <input class="user_input" type="text" placeholder="YOUR NAME...">
           <br><br>
           <input type="submit" value="ENTER" class="btns">
       </form>
+      <img class="fire-img" src="https://media.giphy.com/media/MA8x4cafYavio/200.gif" height= 200px>
     </div>
 
       <!-- APP SCREEN -->
@@ -24,6 +26,7 @@
 
         <header>
           <ul class="nav-bar">
+            <li class="logo">🔥 the campfire</li>
             <li class="js-user"></li>
             <li>SEARCH BAR: _____</li>
             <li>FILTER PLACE HOLDER</li>
@@ -49,12 +52,20 @@
           </div>
         </div>
 
-      </div>  <!-- end of app -->
+        <!-- SHOW STORY MODAL -->
+        <div id="showModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>IT WORKED???</p>
+          </div>
+        </div>
 
+      </div>  <!-- end of app -->
+      <script src = "src/new-story-modal.js" type = "text/javascript"></script>
+      <script src = "src/show-story-modal.js" type = "text/javascript"></script>
       <script src = "src/apiAdapter.js" type = "text/javascript"></script>
       <script src = "src/utility.js" type = "text/javascript"></script>
       <script src = "src/welcome.js" type = "text/javascript"></script>
-      <script src = "src/modal.js" type = "text/javascript"></script>
       <script src = "src/main.js" type = "text/javascript"></script>
   </body>
 
