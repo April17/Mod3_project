@@ -1,3 +1,4 @@
 class Tag < ApplicationRecord
-  belongs_to :story
+  has_many :story_tags
+  has_many :stories, through: :story_tags
 end
