@@ -20,6 +20,7 @@ class ApiAdapter {
   static fetchStories() {
     return fetch("http://localhost:3000/stories")
   }
+
   static searchStories(searchParams){
     let search = {
       "search": searchParams
@@ -34,4 +35,10 @@ class ApiAdapter {
     }
     return fetch("http://localhost:3000/search", config)
   }
+
+  static fetchOnStory(id) {
+    return fetch(`http://localhost:3000/stories/${id}`)
+      .then(rsp => rsp.json())
+  }
+
 }

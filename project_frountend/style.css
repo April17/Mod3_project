@@ -7,27 +7,30 @@ body {
   padding-top: 40px;
 }
 
+.candle-img {
+  margin: 60px;
+  margin-left: 80px;
+}
+
 #front-title {
-  text-shadow: #EEEE00 0 0 30px, #FF0000 3px 5px 100px;
+  text-shadow: #2BE8B1 0 1px 15px, #8BCCE8 3px 5px 100px;
   font-family: 'Offside', cursive;
   font-size: 70px;
   color: #29231F;
+  padding-top: 70px;
 }
 
 li.logo {
-  text-shadow: #EEEE00 0 0 2px, #FF0000 3px 5px 8px;
+  text-shadow: #2CE866 0 2px 4px, #1327FF 1px 10px 8px
   font-family: 'Offside', cursive;
   color: Black;
 }
 
 .the_form {
   zoom: 0.8;
-  padding-top: 30px;
+  padding-top: 90px;
 }
 
-.fire_img {
-  position: absolute;
-}
 
 .user_input {
   border: 1px solid #ccc;
@@ -42,7 +45,7 @@ li.logo {
   display: none;
 }
 
-.btns {
+.btns, .like-btn, .comment-btn {
   display: inline-block;
   padding: 10px 25px;
   outline: none;
@@ -56,11 +59,16 @@ li.logo {
   box-shadow: 0 7px #999;
   margin-top: 15px;
 }
-.btns:hover {
+.btns:hover, .like-btn:hover, .comment-btn:hover {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
   margin-top: 15px;
 }
+
+.like-btn, .comment-btn {
+  zoom: 0.6
+}
+
 
 header {
   display: flex;
