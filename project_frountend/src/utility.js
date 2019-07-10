@@ -1,5 +1,5 @@
 class Utility{
-  
+
   static allStoriesToDOM(data) {
     data.forEach(function(story){
       Utility.oneStory(story)
