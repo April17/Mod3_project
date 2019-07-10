@@ -7,13 +7,7 @@ class ShowStoryModal {
     if (event.target.id === "tomb-con") {
       const storyId = event.target.dataset.id
       ApiAdapter.fetchOnStory(storyId)
-        .then(console.log)
-
-      // add new js file class that deals with adding data to show modal that takes the data with it
-      showStory.style.display = "block";
-      storyclose.addEventListener("click", () => {
-        showStory.style.display = "none";
-      })
+        .then(Utility.addStoryData)
     }
   }
 

@@ -69,6 +69,10 @@ li.logo {
   zoom: 0.6
 }
 
+.like-btn {
+  margin-bottom: 20px;
+}
+
 
 header {
   display: flex;
