@@ -25,13 +25,17 @@ class Welcome {
 
   static testFunction(data) {
     data.forEach(function(story){
-      graveYard.innerHTML +=  `
-       <div class="tomb">${story.title}</div>
-      `
-      anime({
-        targets: '.tomb',
-        translateY: -20
-      })
+      Welcome.oneStone(story)
+    })
+  }
+
+  static oneStone(story){
+    graveYard.innerHTML +=  `
+     <div class="tomb">${story.title}</div>
+    `
+    anime({
+      targets: '.tomb',
+      translateY: -20
     })
   }
 
