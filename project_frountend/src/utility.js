@@ -42,6 +42,7 @@ class Utility{
   }
 
   static addStoryData(story) {
+    deleteBtn.className = "btns hidden"
     showStory.querySelector('h3').innerText = story.title
     showStory.querySelector('p').innerText = story.content
     showStory.querySelector('.like-btn').innerText = `💀 ${story.like_count}`
