@@ -179,3 +179,14 @@ header {
   text-decoration: none;
   cursor: pointer;
 }
+.navbar-nav > li > .dropdown-menu {
+  background-color: teal;
+}
+
+.tag-dropdown {
+  margin-left: 5px;
+}
+
+.comment-ul{
+  padding-left: 10px;
+}
