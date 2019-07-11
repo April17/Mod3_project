@@ -1,6 +1,47 @@
 body {
   background-color: #1C0827;
 }
+.container-fluid {
+  display: table;   /* Allow the centering to work */
+  margin: 0 auto;
+}
+
+.navbar {
+  width: 100%;
+  background-color: teal;
+}
+
+
+#options {
+  font-family: "Offside";
+}
+#options&gt;a {
+    background-image: url(triangle.png);
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    padding-right: 42px;
+}
+.subnav {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 130px;
+    height: auto;
+    opacity: 0;
+    transition: all 0.1s;
+    background: white;
+}
+.subnav li {
+    float: none;
+    list-style: none;
+}
+
+#options:hover .subnav {
+    visibility: visible;
+    /* top: 100%; */
+    opacity: 1;
+}
 
 .login {
   text-align: center;
@@ -114,27 +155,40 @@ header {
   justify-content: center;
   align-content: space-between;
   flex-wrap: wrap;
-  text-align: center;
-  margin-right: 60px;
+  padding-top: 40px;
 }
 
 .tomb {
-  text-align: center;
   background-color: transparent;
-  width: 80px;
-  margin: 80px;
-  text-align: center;
   font-size: 10px;
-  zoom: 0.9;
+  zoom: 1;
+  overflow: hidden;
+  position: relative;
+  text-align: center
+}
+
+.graveyard > .tomb {
+  margin: 30px;
+}
+
+.tomb-con {
+  width: 100%;
 }
 
 .tomb-title {
   color: Black;
   font-family: "Offside";
-  position: relative;
-  bottom: 50%;
-  left: 90%;
-  word-wrap: break-word;
+  font-size: 15px;
+  font-weight: bold;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.tomb:hover {
+  text-shadow: yellow 0 1px 15px, yellow 3px 5px 100px;
 }
 
 /* The Modal (background) */
@@ -155,15 +209,34 @@ header {
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
+  font-family: "Offside";
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%;
+  width: 40%;
   border-radius: 15px;
   box-shadow: 0 7px #999;
   position: absolute;
   top: 20%;
   left: 30%;
+}
+
+#js-tags {
+  color: teal;
+}
+
+#checkdiv {
+  padding-bottom: 10px;
+}
+
+.navbar-form {
+  font-family: "Offside";
+}
+
+.modal-titles {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 /* The Close Button */

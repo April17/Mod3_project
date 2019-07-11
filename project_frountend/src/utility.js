@@ -38,7 +38,7 @@ class Utility{
         <input type="checkbox" class="newStoryCheckbox" value="${tag.id}"><label for="content">${tag.name}</label><br>
       `
     })
-    newStoryForm.append(checkDiv)
+    // newStoryForm.append(checkDiv)
   }
 
   static addStoryData(story) {
@@ -69,6 +69,7 @@ class Utility{
         showStory.querySelector('.js-comment-list').append(ul)
       })
     }
+    commentForm.reset()
   }
 
   static showDeleteBtn(){
@@ -80,7 +81,7 @@ class Utility{
   static getTags(story) {
     const p = document.querySelector("#js-tags")
     const tagArray = story.tags.map(x => x.name)
-    p.innerText = tagArray.join(", ")
+    p.innerText = "TAGS: " + tagArray.join(", ")
   }
   static updateLike(likeCount){
     showStory.querySelector('.like-btn').innerText = `💀 ${likeCount.like_count}`

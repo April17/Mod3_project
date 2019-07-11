@@ -1,3 +1,4 @@
+
 // ---------------- Verable ----------------
 const theApp = document.querySelector('#the_app')
 const graveYard = document.querySelector(".graveyard");

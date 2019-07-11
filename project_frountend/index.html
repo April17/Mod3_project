@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>The graveyard</title>
+    <title>🔥 the graveyard</title>
     <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Finger+Paint|Megrim|Offside|Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -32,17 +33,26 @@
       <div class="hidden" id="the_app">
 
         <header>
+          <!-- NAVIGATION BAR -->
           <nav class="navbar navbar-inverse">
             <div class="container-fluid">
               <ul class="nav navbar-nav">
                 <li class="li-css"><a href="#">🔥 the graveyard</a></li>
-                <li class="li-css"><a href="#" id="js-user">sdfsdf</a></li>
+                <li class="li-css"><a href="#" id="js-user"></a></li>
+                <li id="options">
+                  <a href="#">TAGS</a>
+                  <ul class="subnav">
+                    <li id="tags-opt"><input type="checkbox" name="" value="gost">Gost</li>
+                    <li id="tags-opt"><input type="checkbox" name="" value="blood">Blood</li>
+                  </ul>
+                </li>
+
               </ul>
               <form class="navbar-form navbar-left" id="search">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search" name="search">
+                  <input type="text" class="form-control" placeholder="search for a story!" name="search">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
               </form>
               <button class="js-btn btns">ADD A TOMBSTONE</button>
             </div>
@@ -58,14 +68,14 @@
          <div class="modal-content">
              <span id="newStoryClose" class="close">&times;</span>
              <form id="newStoryForm" class="js-form">
-               <h3>Tell A Story</h3>
+               <h3 class="modal-titles">Tell A Story</h3>
                <label for="title">Title</label><br>
                <input id="title" type="text" placeholder="Title">
                <br><label for="content">Content</label><br>
                <textarea id="content" rows="5" cols="50" class="form-control"></textarea><br>
                <div id="checkdiv">
                </div>
-               <input type="submit" value="Submit!">
+               <input class="btns" type="submit" value="Submit!">
              </form>
           </div>
         </div>
@@ -74,12 +84,12 @@
         <div id="showModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
-            <h3></h3>
-            <p></p>
+            <h3 class="modal-titles"></h3>
+            <p id="story-content"></p>
             <div class="like-div">
               <!-- <p class="js-likes">0</p> -->
               <button class="like-btn">💀 0</button>
-              <button class="btns hidden" id="deleteBtn">💀 0</button>
+              <button class="btns hidden" id="deleteBtn">DELETE?</button>
             </div>
             <!-- SHOW COMMENTS -->
             <div class="panel-group">

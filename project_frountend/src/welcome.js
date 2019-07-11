@@ -5,9 +5,9 @@ class Welcome {
     const name = event.target[0].value
     const welcomeUser = document.querySelector('#js-user')
       if (name === "") {
-        return alert("Please Enter A Name!");
+        return alert("(Θ︹Θ)ს Please Enter A Name!");
       }
-    welcomeUser.innerText = `👻  ${name.toUpperCase()} 👻`
+    welcomeUser.innerText = `Welcome, ${name.toUpperCase()} 👻`
     ApiAdapter.setCurrentUser(name)
       .then(Utility.setCurrentUser)
     event.target.parentElement.className += " hidden"

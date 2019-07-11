@@ -22,5 +22,4 @@ class ShowStoryModal {
     ApiAdapter.commentStory(commentForm.content.value)
       .then(Utility.getComments)
   }
-
 }
