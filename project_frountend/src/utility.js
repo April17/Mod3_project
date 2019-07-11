@@ -100,4 +100,35 @@ class Utility{
     graveYard.innerHTML = ""
     Utility.allStoriesToDOM(results)
   }
+
+  static addFilterTags(tags){
+    filterUl.innerHTML = ""
+    tags.forEach(function(tag){
+      if (checkedFilterTags.includes(tag.id.toString())) {
+        filterUl.innerHTML += `
+          <li class="tag-dropdown">
+            <input id="${tag.name}" type="checkbox" class="newStoryCheckbox" value="${tag.id}" checked>
+            <label name="${tag.name}" for="content">${tag.name}</label>
+          </li>
+        `
+      } else {
+        filterUl.innerHTML += `
+          <li class="tag-dropdown">
+            <input id="${tag.name}" type="checkbox" class="newStoryCheckbox" value="${tag.id}">
+            <label name="${tag.name}" for="content">${tag.name}</label>
+          </li>
+        `
+      }
+    })
+  }
+
+  static filterStone(event){
+    if (event.target.checked === true) {
+      checkedFilterTags.push(event.target.value)
+    } else {
+      checkedFilterTags = checkedFilterTags.filter(function(tag) { return tag !== event.target.value })
+    }
+    ApiAdapter.filterStone(checkedFilterTags)
+      .then(Utility.filterDom)
+  }
 }

@@ -21,5 +21,6 @@ class ShowStoryModal {
     event.preventDefault()
     ApiAdapter.commentStory(commentForm.content.value)
       .then(Utility.getComments)
+    commentForm.reset()
   }
 }

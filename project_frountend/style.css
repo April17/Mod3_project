@@ -12,37 +12,6 @@ body {
 }
 
 
-#options {
-  font-family: "Offside";
-}
-#options&gt;a {
-    background-image: url(triangle.png);
-    background-position: 85% center;
-    background-repeat: no-repeat;
-    padding-right: 42px;
-}
-.subnav {
-    visibility: hidden;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 130px;
-    height: auto;
-    opacity: 0;
-    transition: all 0.1s;
-    background: white;
-}
-.subnav li {
-    float: none;
-    list-style: none;
-}
-
-#options:hover .subnav {
-    visibility: visible;
-    /* top: 100%; */
-    opacity: 1;
-}
-
 .login {
   text-align: center;
   padding-top: 40px;
@@ -119,14 +88,6 @@ header {
   top: 0;
 }
 
- /* .nav-bar {
-  background-color: teal;
-  overflow: hidden;
-  position: fixed;
-  padding-bottom: 20px;
-  text-align: center;
-  width: 100%;
-} */
 
 .container-fluid {
   background: teal;
@@ -144,11 +105,6 @@ header {
   font-family: "Offside";
 }
 
-
-/* .btn-div {
-  text-align: center;
-  padding-bottom: 50px;
-} */
 
 .graveyard {
   display: flex;
@@ -251,4 +207,15 @@ header {
   color: red;
   text-decoration: none;
   cursor: pointer;
+}
+.navbar-nav > li > .dropdown-menu {
+  background-color: teal;
+}
+
+.tag-dropdown {
+  margin-left: 5px;
+}
+
+.comment-ul{
+  padding-left: 10px;
 }

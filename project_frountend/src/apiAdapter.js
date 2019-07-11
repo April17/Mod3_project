@@ -37,7 +37,8 @@ class ApiAdapter {
       },
       body: JSON.stringify(search)
     }
-    return fetch("http://localhost:3000/search", config).then(rsp => rsp.json())
+    return fetch("http://localhost:3000/search", config)
+      .then(rsp => rsp.json())
   }
   static getTags(){
     return fetch(`http://localhost:3000/tags`)
@@ -104,5 +105,20 @@ class ApiAdapter {
     fetch(`http://localhost:3000/stories/${id}`, config)
       .then(rsp => rsp.json())
       .then(Utility.removeStone)
+  }
+  static filterStone(tags){
+    let filter = {
+      "tag_ids": tags
+    }
+    let config = {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(filter)
+    }
+    return fetch("http://localhost:3000/filter", config)
+      .then(rsp => rsp.json())
   }
 }

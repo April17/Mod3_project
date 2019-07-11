@@ -18,4 +18,9 @@ class Welcome {
     .then(Utility.allStoriesToDOM)
   }
 
+  addFilter(){
+    ApiAdapter.getTags()
+      .then(Utility.addFilterTags)
+  }
+
 }
