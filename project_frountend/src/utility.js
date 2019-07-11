@@ -132,4 +132,14 @@ class Utility{
     ApiAdapter.filterStone(checkedFilterTags)
       .then(Utility.filterDom)
   }
+
+  static changeCandle() {
+    if (switchCan.name === "light") {
+      switchCan.src = "images/dark-candle.png"
+      switchCan.name = "dark"
+    } else {
+      switchCan.src = "images/candle-img.gif"
+      switchCan.name = "light"
+    }
+  }
 }
