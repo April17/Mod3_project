@@ -23,7 +23,13 @@ class NewStoryModal {
       })
       newStoryForm.reset()
       ApiAdapter.createStory(title, content, checkedTags)
-        .then(Utility.oneStory)
+        .then(data => {
+          if (switchCan.name === "light") {
+            Utility.oneStory(data)
+          } else {
+          Utility.oneStoryTwo(data)
+          }
+        })
   }
 
 }

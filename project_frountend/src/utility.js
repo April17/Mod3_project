@@ -121,7 +121,11 @@ class Utility{
 
   static filterDom(results) {
     graveYard.innerHTML = ""
-    Utility.allStoriesToDOM(results)
+    if (switchCan.name === "light") {
+      Utility.allStoriesToDOM(results)
+    } else {
+    Utility.allStoriesToDOMTwo(results)
+    }
   }
 
   static addFilterTags(tags){
