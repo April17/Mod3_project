@@ -17,6 +17,8 @@ const deleteBtn = document.querySelector("#deleteBtn")
 const switchCan = document.querySelector("#light-candle")
 const filter = document.querySelector("#filter")
 const filterUl = document.querySelector("#filterUl")
+const the_body = document.querySelector("body")
+const audioBar = document.querySelector("#audio-bar")
 const data = ApiAdapter.fetchStories()
 const welcome = new Welcome
 const newStory = new NewStoryModal
@@ -26,6 +28,14 @@ let checkedFilterTags = []
 
 // ---------------- EVENT LISTENERS ----------------
 document.addEventListener("DOMContentLoaded", () => {
+  anime({
+    targets: '.login',
+    opacity: 1,
+    translateY: 30,
+    easing: 'spring(14, 80, 5, 0)',
+    duration: 9000
+  });
+  
   welcomeForm.addEventListener("submit", welcome.secondStage)
   showForm.addEventListener("click", newStory.displayModal)
   newStoryForm.addEventListener("submit", newStory.newStoryInfo)

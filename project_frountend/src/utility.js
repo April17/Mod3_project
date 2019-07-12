@@ -17,9 +17,28 @@ class Utility{
     })
   }
 
+  static allStoriesToDOMTwo(data) {
+    data.forEach(function(story){
+      Utility.oneStoryTwo(story)
+    })
+  }
+
   static oneStory(story){
     graveYard.innerHTML =  `
      <div class="tomb" id="${story.id}"><img src="images/tombstone.png" data-id=${story.id} id="tomb-con" height= 200px>
+      <div class="tomb-title">${story.title}</div>
+     </div>
+    ` + graveYard.innerHTML
+    anime({
+      targets: '.tomb',
+      translateY: -30,
+      delay: anime.stagger(150)
+    })
+  }
+
+  static oneStoryTwo(story){
+    graveYard.innerHTML =  `
+     <div class="tomb" id="${story.id}"><img src="images/night-mode-tomb2.png" data-id=${story.id} id="tomb-con" height= 200px>
       <div class="tomb-title">${story.title}</div>
      </div>
     ` + graveYard.innerHTML
@@ -84,13 +103,16 @@ class Utility{
     const tagArray = story.tags.map(x => x.name)
     p.innerText = "TAGS: " + tagArray.join(", ")
   }
+
   static updateLike(likeCount){
     showStory.querySelector('.like-btn').innerText = `💀 ${likeCount.like_count}`
   }
+
   static removeStone(data){
     document.getElementById(`${data.id}`).remove()
     showStory.style.display = "none";
   }
+
   static searchStone(event){
     event.preventDefault()
     ApiAdapter.searchStories(searchForm.search.value)
@@ -137,9 +159,21 @@ class Utility{
     if (switchCan.name === "light") {
       switchCan.src = "images/dark-candle.png"
       switchCan.name = "dark"
+      the_body.className = "nightmode"
+      graveYard.innerHTML = ""
+      ApiAdapter.fetchStories()
+      .then(rsp => rsp.json())
+      .then(Utility.allStoriesToDOMTwo)
+      audioBar.innerHTML = `<iframe src="music/ghost_choir.mp3" allow="autoplay" id="audio" controls=0 class="hidden"></iframe>`
     } else {
       switchCan.src = "images/candle-img.gif"
       switchCan.name = "light"
+      the_body.className = "daytime"
+      graveYard.innerHTML = ""
+      ApiAdapter.fetchStories()
+      .then(rsp => rsp.json())
+      .then(Utility.allStoriesToDOM)
+      audioBar.innerHTML = ""
     }
   }
 }
